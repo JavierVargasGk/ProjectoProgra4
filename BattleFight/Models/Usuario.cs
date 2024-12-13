@@ -3,7 +3,7 @@
     public class Usuario
     {
 
-        private int id;
+        private int iduser;
         private int cedula;
         private string nombre;
         private string alias;
