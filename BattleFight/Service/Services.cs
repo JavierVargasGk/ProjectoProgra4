@@ -60,12 +60,12 @@ namespace BattleFight.Service
 
             #region Metodos de Equipo
 
-            public void agregarUsuario(Usuario usuario)
+            public void agregarEquipo(Usuario usuario)
             {
                 usuarios.Add(usuario);
                 SaveChanges();
             }
-            public List<Usuario> mostrarUsuario()
+            public List<Usuario> mostrarEquipos()
             {
                 return usuarios.ToList();
             }
@@ -77,14 +77,18 @@ namespace BattleFight.Service
                     return usuarioBuscado;
                 else throw new Exception("Usuario no registrado");
             }
-            public void eliminarUsuario(Usuario usuario)
+            public void eliminarEquipo(Usuario usuario)
             {
                 usuarios.Remove(usuario);
                 SaveChanges();
             }
 
-            public void actualizarUsuario(Usuario usuarioActualizado)
+            public void actualizarEquipo(Usuario usuarioActualizado)
             {
+                if(usuarioActualizado!= null)
+                {
+                    throw new Exception("Usuario no valido");
+                }
                 var usuarioAntiguo = usuarios.FirstOrDefault(x => x.Id == usuarioActualizado.Id);
                 if (usuarioAntiguo != null)
                 {
@@ -99,9 +103,9 @@ namespace BattleFight.Service
                 else throw new Exception("Usuario no existente");
             }
 
-            public List<Equipo> cantidadJugadores(Equipo jugador)
+            public int cantidadEquipo(Equipo equipo)
             {
-                return jugador.ToList();
+                return equipo.Jugadores.Count();
             }
 
             #endregion

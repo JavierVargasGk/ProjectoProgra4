@@ -3,7 +3,7 @@
     public class Usuario
     {
 
-        private int iduser;
+        private int id;
         private int cedula;
         private string nombre;
         private string alias;
@@ -11,7 +11,7 @@
         private DateTime fechaDeRegistro;
         private string estado;
         private string contrasenna;
-        private string confirmarContrasenna;
+        
 
         public int Id { get => id; set => id = value; }
         public int Cedula { get => cedula; set => cedula = value; }
@@ -21,9 +21,8 @@
         public string Estado { get => estado; set => estado = value; }
         public string Contrasenna { get => contrasenna; set => contrasenna = value; }
         public string Alias { get => alias; set => alias = value; }
-        public string ConfirmarContrasenna { get => confirmarContrasenna; set => confirmarContrasenna = value; }
 
-        public Usuario(string confirmarContrasenna, int id, int cedula, string nombre,string alias, string genero, DateTime fechaDeRegistro, string estado, string contrasenna)
+        public Usuario(int id, int cedula, string nombre,string alias, string genero, DateTime fechaDeRegistro, string estado, string contrasenna)
         {
             this.id = id;
             this.cedula = cedula;
@@ -33,7 +32,6 @@
             this.estado = estado;
             this.contrasenna = contrasenna;
             this.alias = alias;
-            this.confirmarContrasenna = confirmarContrasenna;   
         }
 
         public Usuario()
@@ -45,7 +43,6 @@
             this.estado = "";
             this.contrasenna = "";
             this.alias = "";
-            this.confirmarContrasenna = "";
         }
     }
 }

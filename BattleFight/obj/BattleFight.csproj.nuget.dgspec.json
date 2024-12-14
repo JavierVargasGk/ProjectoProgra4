@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sebis\\Videos\\BattleFight\\BattleFight.csproj": {}
+    "C:\\Users\\Javier\\Source\\Repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\BattleFight.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sebis\\Videos\\BattleFight\\BattleFight.csproj": {
+    "C:\\Users\\Javier\\Source\\Repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\BattleFight.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sebis\\Videos\\BattleFight\\BattleFight.csproj",
+        "projectUniqueName": "C:\\Users\\Javier\\Source\\Repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\BattleFight.csproj",
         "projectName": "BattleFight",
-        "projectPath": "C:\\Users\\sebis\\Videos\\BattleFight\\BattleFight.csproj",
-        "packagesPath": "C:\\Users\\sebis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sebis\\Videos\\BattleFight\\obj\\",
+        "projectPath": "C:\\Users\\Javier\\Source\\Repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\BattleFight.csproj",
+        "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Javier\\Source\\Repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\sebis\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Javier\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
