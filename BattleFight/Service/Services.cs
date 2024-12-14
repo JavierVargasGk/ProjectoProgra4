@@ -50,7 +50,6 @@ namespace BattleFight.Service
                     usuarioAntiguo.Contrasenna = usuarioActualizado.Contrasenna;
                     usuarioAntiguo.Genero = usuarioActualizado.Genero;
                     usuarioAntiguo.Estado = usuarioActualizado.Estado;
-                    usuarioAntiguo.ConfirmarContrasenna = usuarioActualizado.ConfirmarContrasenna;
                     SaveChanges();
                 }
                 else throw new Exception("Usuario no existente");
@@ -70,7 +69,7 @@ namespace BattleFight.Service
                 return usuarios.ToList();
             }
 
-            public Usuario buscarUsuario(int id)
+            public Usuario buscarEquipos(int id)
             {
                 var usuarioBuscado = usuarios.FirstOrDefault(x => x.Id == id);
                 if (usuarioBuscado != null)
@@ -83,24 +82,23 @@ namespace BattleFight.Service
                 SaveChanges();
             }
 
-            public void actualizarEquipo(Usuario usuarioActualizado)
+            public void actualizarEquipo(Usuario EquipoActualizado)
             {
-                if(usuarioActualizado!= null)
+                if(EquipoActualizado!= null)
                 {
-                    throw new Exception("Usuario no valido");
+                    throw new Exception("Equipo no valido");
                 }
-                var usuarioAntiguo = usuarios.FirstOrDefault(x => x.Id == usuarioActualizado.Id);
-                if (usuarioAntiguo != null)
+                var EquipoAntiguo = usuarios.FirstOrDefault(x => x.Id == EquipoActualizado.Id);
+                if (EquipoAntiguo != null)
                 {
-                    usuarioAntiguo.Nombre = usuarioActualizado.Nombre;
-                    usuarioAntiguo.Alias = usuarioActualizado.Alias;
-                    usuarioAntiguo.Contrasenna = usuarioActualizado.Contrasenna;
-                    usuarioAntiguo.Genero = usuarioActualizado.Genero;
-                    usuarioAntiguo.Estado = usuarioActualizado.Estado;
-                    usuarioAntiguo.ConfirmarContrasenna = usuarioActualizado.ConfirmarContrasenna;
+                    EquipoAntiguo.Nombre = EquipoActualizado.Nombre;
+                    EquipoAntiguo.Alias = EquipoActualizado.Alias;
+                    EquipoAntiguo.Contrasenna = EquipoActualizado.Contrasenna;
+                    EquipoAntiguo.Genero = EquipoActualizado.Genero;
+                    EquipoAntiguo.Estado = EquipoActualizado.Estado;
                     SaveChanges();
                 }
-                else throw new Exception("Usuario no existente");
+                else throw new Exception("Equipo no existente");
             }
 
             public int cantidadEquipo(Equipo equipo)
@@ -112,7 +110,37 @@ namespace BattleFight.Service
 
             #region Metodos de Torneo
 
+            public void agregarTorneo(Torneo torneo)
+            {
+                torneos.Add(torneo);
+                SaveChanges();
+            }
+            public List<Torneo> mostrarTorneos()
+            {
+                return torneos.ToList();
+            }
+
+            public Torneo buscarTorneos(int id)
+            {
+                var torneoBuscado = torneos.FirstOrDefault(x => x.Id == id);
+
+                if (torneoBuscado != null)
+
+                    return torneoBuscado;
+
+                else throw new Exception("Torneo no registrado");
+            }
+            public void eliminarTorneo(Torneo torneo)
+            {
+                torneos.Remove(torneo);
+                SaveChanges();
+            }
+
+            
+            
+
             #endregion
+            
         }
     }
 }

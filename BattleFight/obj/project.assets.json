@@ -1053,19 +1053,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Javier\\.nuget\\packages\\": {}
+    "C:\\Users\\sebis\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Javier\\Source\\Repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\BattleFight.csproj",
+      "projectUniqueName": "C:\\Users\\sebis\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\BattleFight.csproj",
       "projectName": "BattleFight",
-      "projectPath": "C:\\Users\\Javier\\Source\\Repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\BattleFight.csproj",
-      "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Javier\\Source\\Repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\obj\\",
+      "projectPath": "C:\\Users\\sebis\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\BattleFight.csproj",
+      "packagesPath": "C:\\Users\\sebis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sebis\\Source\\Repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Javier\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sebis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1121,7 +1126,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
