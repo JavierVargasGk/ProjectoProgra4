@@ -3,9 +3,8 @@ using System.Data.Entity;
 
 namespace BattleFight.Service
 {
-    public class Services
-    {
-        public class Service : DbContext
+   
+        public class Services : DbContext
         {
             public DbSet<Usuario> usuarios { get; set; }
 
@@ -13,7 +12,7 @@ namespace BattleFight.Service
 
             public DbSet<Torneo> torneos { get; set; }
 
-            public Service() : base("BattleFight") { }
+            public Services() : base("BattleFight") { }
 
             #region Metodos de Usuario
 
@@ -54,51 +53,69 @@ namespace BattleFight.Service
                 }
                 else throw new Exception("Usuario no existente");
             }
+            public Usuario validarLogin(string user, string pass, string categoria)
+            {
+                var usuarioLogueado = usuarios.FirstOrDefault(u => u.Nombre == user && u.Contrasenna == pass && u.Estado == "Activo");
 
+                if (usuarioLogueado != null)
+
+                    return usuarioLogueado;
+
+                else throw new Exception("Datos de inicio incorrectos o estado inactivo");
+            }
             #endregion
 
             #region Metodos de Equipo
 
-            public void agregarEquipo(Usuario usuario)
+            public void agregarEquipo(Equipo equipo)
             {
-                usuarios.Add(usuario);
+                equipos.Add(equipo);
                 SaveChanges();
             }
-            public List<Usuario> mostrarEquipos()
+            public List<Equipo> mostrarEquipos()
             {
-                return usuarios.ToList();
+                return    equipos.ToList();
             }
 
-            public Usuario buscarEquipos(int id)
+            public  Equipo buscarEquipos(int id)
             {
-                var usuarioBuscado = usuarios.FirstOrDefault(x => x.Id == id);
-                if (usuarioBuscado != null)
-                    return usuarioBuscado;
+                var equipoBuscado = equipos.FirstOrDefault(x => x.Id == id);
+                if (equipoBuscado != null)
+                    return equipoBuscado;
                 else throw new Exception("Usuario no registrado");
             }
-            public void eliminarEquipo(Usuario usuario)
+            public void eliminarEquipo(Equipo equipo)
             {
-                usuarios.Remove(usuario);
+                    equipos.Remove(equipo);
                 SaveChanges();
             }
 
-            public void actualizarEquipo(Usuario EquipoActualizado)
+            public void actualizarEquipo(Equipo equipoActualizado)
             {
-                if(EquipoActualizado!= null)
+                var equipoAntiguo = equipos.FirstOrDefault(x => x.Id == equipoActualizado.Id);
+                if (equipoAntiguo != null)
                 {
-                    throw new Exception("Equipo no valido");
-                }
-                var EquipoAntiguo = usuarios.FirstOrDefault(x => x.Id == EquipoActualizado.Id);
-                if (EquipoAntiguo != null)
-                {
-                    EquipoAntiguo.Nombre = EquipoActualizado.Nombre;
-                    EquipoAntiguo.Alias = EquipoActualizado.Alias;
-                    EquipoAntiguo.Contrasenna = EquipoActualizado.Contrasenna;
-                    EquipoAntiguo.Genero = EquipoActualizado.Genero;
-                    EquipoAntiguo.Estado = EquipoActualizado.Estado;
+                    equipoAntiguo.NombreEquipo = equipoActualizado.NombreEquipo;
+                    equipoAntiguo.Categoria = equipoActualizado.Categoria;
+                    equipoAntiguo.Puntuaje = equipoActualizado.Puntuaje;
+                    equipoAntiguo.Jugadores = equipoActualizado.Jugadores;
+                    equipoAntiguo.Codigo = equipoActualizado.generarCodigoEquipo(equipoActualizado.Categoria, equipoActualizado.Jugadores);
                     SaveChanges();
                 }
                 else throw new Exception("Equipo no existente");
+            }
+
+            public List<Equipo> filtroEquipos()
+            {
+                return equipos.ToList();
+            }
+
+            public List<Equipo> filtroUsuarios(string CategoriaBuscada)
+            {
+                var equiposFiltrados = equipos.Where(x => x.CategoriaBuscada == CategoriaBuscada).ToList();
+                if (equiposFiltrados != null)
+                    return (List<Equipo>)equiposFiltrados;
+                else throw new Exception("Equipos sin la categoria solicitada");
             }
 
             public int cantidadEquipo(Equipo equipo)
@@ -143,4 +160,4 @@ namespace BattleFight.Service
             
         }
     }
-}
+

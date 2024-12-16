@@ -10,21 +10,22 @@ namespace BattleFight.Models
         private int puntuaje;
         private List<int> jugadores;
         private string categoria;
-        private string usuarioResp;
+        private string categoriaBuscada;
 
-        public Equipo(int id, string nombreEquipo, int puntuaje, List<int> jugadores, string categoria, string usuarioResp)
+        public Equipo(int id, string nombreEquipo, int puntuaje, List<int> jugadores, string categoria, string categoriaBuscada,string codigo)
         {
             this.id = id;
             this.nombreEquipo = nombreEquipo;
             this.puntuaje = puntuaje;
             this.jugadores = jugadores;
             this.categoria = categoria;
-            this.UsuarioResp = usuarioResp;
+            this.categoriaBuscada = categoriaBuscada;
+            this.codigo = codigo;
         }
 
         public Equipo()
         {
-            this.UsuarioResp = "";
+            this.categoriaBuscada = "";
             this.id = 0;
             this.codigo = "";
             this.nombreEquipo = "";
@@ -38,9 +39,10 @@ namespace BattleFight.Models
         public int Puntuaje { get => puntuaje; set => puntuaje = value; }
         public List<int> Jugadores { get => jugadores; set => jugadores = value; }
         public string Categoria { get => categoria; set => categoria = value; }
-        public string UsuarioResp { get => usuarioResp; set => usuarioResp = value; }
+        public string CategoriaBuscada { get => categoriaBuscada; set => categoriaBuscada = value; }
+        public string Codigo { get => codigo; set => codigo = value; }
 
-        public string generarCodigoEquipo(string Categoria, string Jugadores)
+        public string generarCodigoEquipo(string Categoria, List<int> Jugadores)
         {
             string codigoEquipo = "";
             string anno = DateTime.Now.Year.ToString().Substring(2, 2);
