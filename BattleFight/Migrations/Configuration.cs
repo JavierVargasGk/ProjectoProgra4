@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BattleFight.Service.Services.Service>
+    internal sealed class Configuration : DbMigrationsConfiguration<BattleFight.Service.Services>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(BattleFight.Service.Services.Service context)
+        protected override void Seed(BattleFight.Service.Services context)
         {
             //  This method will be called after migrating to the latest version.
 
