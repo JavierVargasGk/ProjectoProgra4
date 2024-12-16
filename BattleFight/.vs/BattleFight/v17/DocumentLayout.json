@@ -1,25 +1,61 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\",
+  "WorkspaceRootPath": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\source\\repos\\javiervargasgk\\projectoprogra4\\battlefight\\service\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\views\\usuario\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:views\\usuario\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\service\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:service\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\source\\repos\\javiervargasgk\\projectoprogra4\\battlefight\\models\\equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\models\\equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:models\\equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\source\\repos\\javiervargasgk\\projectoprogra4\\battlefight\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\source\\repos\\javiervargasgk\\projectoprogra4\\battlefight\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\source\\repos\\javiervargasgk\\projectoprogra4\\battlefight\\models\\torneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\views\\usuario\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:views\\usuario\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\controllers\\equipocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:controllers\\equipocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\controllers\\torneocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:controllers\\torneocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|c:\\users\\javie\\onedrive\\desktop\\projecto\u002Bcontrollers\\battlefight\\models\\torneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1E17EE8-4AEF-4EED-B4DD-B7043A971889}|BattleFight.csproj|solutionrelative:models\\torneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,35 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Configuration.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\Migrations\\Configuration.cs",
-              "RelativeDocumentMoniker": "Migrations\\Configuration.cs",
-              "ToolTip": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\Migrations\\Configuration.cs",
-              "RelativeToolTip": "Migrations\\Configuration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T21:58:39.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Services.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\Service\\Services.cs",
-              "RelativeDocumentMoniker": "Service\\Services.cs",
-              "ToolTip": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\Service\\Services.cs",
-              "RelativeToolTip": "Service\\Services.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAUwGUAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T21:44:03.469Z"
             },
             {
               "$type": "Bookmark",
@@ -71,10 +83,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -130,39 +138,185 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Torneo.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\Models\\Torneo.cs",
-              "RelativeDocumentMoniker": "Models\\Torneo.cs",
-              "ToolTip": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\Models\\Torneo.cs",
-              "RelativeToolTip": "Models\\Torneo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Views\\Usuario\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Usuario\\Create.cshtml",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Views\\Usuario\\Create.cshtml",
+              "RelativeToolTip": "Views\\Usuario\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T21:46:54.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Views\\Usuario\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Usuario\\Login.cshtml",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Views\\Usuario\\Login.cshtml",
+              "RelativeToolTip": "Views\\Usuario\\Login.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwCEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T20:15:47.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T20:12:14.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T20:12:13.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T01:26:49.538Z"
+              "WhenOpened": "2024-12-16T20:09:49.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-16T20:00:07.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwCkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T19:42:34.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TorneoController.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Controllers\\TorneoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TorneoController.cs",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Controllers\\TorneoController.cs",
+              "RelativeToolTip": "Controllers\\TorneoController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswFEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T08:10:54.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EquipoController.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Controllers\\EquipoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EquipoController.cs",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Controllers\\EquipoController.cs",
+              "RelativeToolTip": "Controllers\\EquipoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T07:50:12.213Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Equipo.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\Models\\Equipo.cs",
-              "RelativeDocumentMoniker": "Models\\Equipo.cs",
-              "ToolTip": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\Models\\Equipo.cs",
-              "RelativeToolTip": "Models\\Equipo.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwAQAAAArAAAAAAAAAA==",
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwDgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T01:26:28.866Z"
+              "WhenOpened": "2024-12-16T07:32:40.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Torneo.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Models\\Torneo.cs",
+              "RelativeDocumentMoniker": "Models\\Torneo.cs",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Models\\Torneo.cs",
+              "RelativeToolTip": "Models\\Torneo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T01:26:49.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Services.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Service\\Services.cs",
+              "RelativeDocumentMoniker": "Service\\Services.cs",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Service\\Services.cs",
+              "RelativeToolTip": "Service\\Services.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAADcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T21:44:03.469Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\javie\\source\\repos\\JavierVargasGk\\ProjectoProgra4\\BattleFight\\Models\\Usuario.cs",
-              "RelativeToolTip": "Models\\Usuario.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAIwC8AAAApAAAAAAAAAA==",
+              "Title": "Equipo.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Models\\Equipo.cs",
+              "RelativeDocumentMoniker": "Models\\Equipo.cs",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Models\\Equipo.cs",
+              "RelativeToolTip": "Models\\Equipo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T01:26:09.783Z"
+              "WhenOpened": "2024-12-11T01:26:28.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto\u002Bcontrollers\\BattleFight\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T01:26:09.783Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -15,10 +15,12 @@ namespace BattleFight.Controllers
 
         public IActionResult Index()
         {
+            var user = HttpContext.Session.GetString("NombreUsuario");
+            ViewBag.NombreUsuario = user;
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult AcercaDe()
         {
             return View();
         }

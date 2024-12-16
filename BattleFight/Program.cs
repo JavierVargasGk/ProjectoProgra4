@@ -1,7 +1,21 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Configurar servicios de sesión
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(90); // Tiempo de expiración de la sesión
+    options.Cookie.HttpOnly = true; // Seguridad del cookie
+    options.Cookie.IsEssential = true; // Hacer que la cookie de sesión sea esencial
+});
+
 
 var app = builder.Build();
 
@@ -16,7 +30,10 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseRouting();
+// Usar la sesión
+app.UseSession();
+
+//app.UseRouting();
 
 app.UseAuthorization();
 

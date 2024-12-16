@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using BattleFight.Service;
+using BattleFight.Models;
 
 namespace BattleFight.Controllers
 {
@@ -30,11 +31,11 @@ namespace BattleFight.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public ActionResult Login(string nombre, string contrasenna, string categoria)
+        public ActionResult Login(Usuario user)
         {
             try
             {
-                var UsuarioLogueado = service.validarLogin(nombre, contrasenna,  categoria);
+                var UsuarioLogueado = service.validarLogin(user.Alias, user.Contrasenna);
                 HttpContext.Session.SetString("NombreUsuario", UsuarioLogueado.Nombre);
                 return RedirectToAction("Index", "Home");
             }
@@ -52,8 +53,8 @@ namespace BattleFight.Controllers
             return View();
         }
 
-        // GET: UsuarioController/Create
-        public ActionResult Create()
+        [HttpGet]
+        public ActionResult SignIn()
         {
             return View();
         }
@@ -61,16 +62,26 @@ namespace BattleFight.Controllers
         // POST: UsuarioController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult SignIn(Usuario usuario,string confirmacion)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    if (usuario.Contrasenna != confirmacion)
+                    {
+                        throw new Exception("Contraseñas no coinciden");
+                    }
+                    service.agregarUsuario(usuario);
+                    return RedirectToAction("LogIn", "Usuario");
+                }
             }
-            catch
+            catch (Exception ex)
             {
+                ViewBag.Error = ex.Message;
                 return View();
             }
+            return View();
         }
 
         // GET: UsuarioController/Edit/5

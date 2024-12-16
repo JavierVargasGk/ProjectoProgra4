@@ -18,6 +18,7 @@ namespace BattleFight.Service
 
             public void agregarUsuario(Usuario usuario)
             {
+                usuario.Estado = "ACTIVO";
                 usuarios.Add(usuario);
                 SaveChanges();
             }
@@ -53,15 +54,16 @@ namespace BattleFight.Service
                 }
                 else throw new Exception("Usuario no existente");
             }
-            public Usuario validarLogin(string user, string pass, string categoria)
+
+            public Usuario validarLogin(string user, string pass)
             {
-                var usuarioLogueado = usuarios.FirstOrDefault(u => u.Nombre == user && u.Contrasenna == pass && u.Estado == "Activo");
+                var usuarioLogueado =
+                    usuarios.FirstOrDefault(u => u.Alias == user && u.Contrasenna == pass && u.Estado == "Activo");
 
-                if (usuarioLogueado != null)
-
-                    return usuarioLogueado;
-
-                else throw new Exception("Datos de inicio incorrectos o estado inactivo");
+                if (usuarioLogueado == null){
+                    throw new Exception("Datos de inicio incorrectos o estado inactivo");
+                }
+                return usuarioLogueado;
             }
             #endregion
 
