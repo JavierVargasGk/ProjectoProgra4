@@ -6,10 +6,10 @@
     String jugadores2 = null;
     String jugadores3 = null;
     List<String> jugadores = ViewBag.ListaJugadores;
-    if (jugadores.Count > 0)
+    if (jugadores.Count() > 0)
     {
         jugadores0 = Model.Jugadores[0];
-        if (jugadores.Count > 1)
+        if (jugadores.Count() > 1)
         {
             jugadores1 = Model.Jugadores[1];
         }

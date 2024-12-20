@@ -18,9 +18,10 @@ namespace BattleFight.Controllers
         // GET: UsuarioController
         public ActionResult Index()
         {
-            return View();
+            var model = service.mostrarUsuario();
+            return View(model);
         }
-
+        
         // GET: UsuarioController/Login
         public ActionResult Login()
         {
@@ -46,13 +47,6 @@ namespace BattleFight.Controllers
             }
 
         }
-
-        // GET: UsuarioController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
         [HttpGet]
         public ActionResult SignIn()
         {
@@ -87,17 +81,23 @@ namespace BattleFight.Controllers
         // GET: UsuarioController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var model = service.buscarUsuario(id);
+            return View(model);
         }
 
         // POST: UsuarioController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Usuario usuario)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    service.actualizarUsuario(usuario);
+                    return RedirectToAction(nameof(Index));
+                }
+                return View();
             }
             catch
             {
@@ -105,19 +105,15 @@ namespace BattleFight.Controllers
             }
         }
 
-        // GET: UsuarioController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
         // POST: UsuarioController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id)
         {
             try
             {
+                var usuarioBuscado= service.buscarUsuario(id);
+                service.eliminarUsuario(usuarioBuscado);
                 return RedirectToAction(nameof(Index));
             }
             catch

@@ -112,25 +112,25 @@ namespace BattleFight.Service
                     equipoAntiguo.NombreEquipo = equipoActualizado.NombreEquipo;
                     equipoAntiguo.Categoria = equipoActualizado.Categoria;
                     equipoAntiguo.Puntuaje = equipoActualizado.Puntuaje;
-                    if (!equipoAntiguo.Jugadores.Contains(jugador1))
-                    {
+                    if (equipoAntiguo.Jugadores.ElementAt(0) != jugador1)
+                {
                         equipoAntiguo.Jugadores.RemoveAt(0);
-                        equipoAntiguo.Jugadores.Add(jugador1);
+                        equipoAntiguo.Jugadores.Insert(0, jugador1);
                     }
-                    if (!equipoAntiguo.Jugadores.Contains(jugador2))
-                    {
+                    if (equipoAntiguo.Jugadores.ElementAt(1) != jugador2)
+                {
                         equipoAntiguo.Jugadores.RemoveAt(1);
-                        equipoAntiguo.Jugadores.Add(jugador2);
+                        equipoAntiguo.Jugadores.Insert(1,jugador2);
                     }
-                    if (!equipoAntiguo.Jugadores.Contains(jugador3))
+                    if (equipoAntiguo.Jugadores.ElementAt(2)!=jugador3)
                     {
                         equipoAntiguo.Jugadores.RemoveAt(2);
-                        equipoAntiguo.Jugadores.Add(jugador3);
+                        equipoAntiguo.Jugadores.Insert(2,jugador3);
                     }
-                    if (!equipoAntiguo.Jugadores.Contains(jugador4))
+                    if (equipoAntiguo.Jugadores.ElementAt(3)!=jugador4)
                     {
-                        equipoAntiguo.Jugadores.RemoveAt(4);
-                        equipoAntiguo.Jugadores.Add(jugador4);
+                        equipoAntiguo.Jugadores.RemoveAt(3);
+                        equipoAntiguo.Jugadores.Insert(3,jugador4);
                     }
                     equipoAntiguo.Codigo = equipoActualizado.generarCodigoEquipo(equipoActualizado.Categoria, equipoActualizado.Jugadores);
                     SaveChanges();
@@ -180,7 +180,20 @@ namespace BattleFight.Service
                 torneos.Remove(torneo);
                 SaveChanges();
             }
-
+            public void AsignarGanador(Torneo torneo,  Equipo id1, Equipo id2)
+        {
+            var TorneoActualizar = torneos.FirstOrDefault(x => x.Id == torneo.Id);
+            if(TorneoActualizar == null) { throw new Exception("Torneo no encontrado"); }
+            if (id1.Puntuaje > id2.Puntuaje)
+            {
+                TorneoActualizar.Ganador = id1.NombreEquipo;
+            }
+            else
+            {
+                TorneoActualizar.Ganador = id2.NombreEquipo;
+            }
+            SaveChanges();
+        }
             
             
 
@@ -188,4 +201,3 @@ namespace BattleFight.Service
             
         }
     }
-

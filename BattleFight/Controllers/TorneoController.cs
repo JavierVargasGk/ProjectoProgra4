@@ -17,14 +17,13 @@ namespace BattleFight.Controllers
         // GET: ProductoController
         public ActionResult Index()
         {
-            
-            return View();
+            var model = service.mostrarTorneos();   
+            return View(model);
         }
 
         // GET: ProductoController/Create
         public ActionResult Create()
         {
-            ViewBag.equipos = service.mostrarTorneos();
             return View();
         }
 
@@ -41,32 +40,38 @@ namespace BattleFight.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch { }
+            catch(Exception e){ throw new Exception(e.Message); }
             return View();
         }
 
         // GET: ProductoController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Fight(int id)
         {
             var torneoBuscado = service.buscarTorneos(id);
+            ViewBag.Equipos = service.FiltroEquipos(torneoBuscado.Categoria);
             return View(torneoBuscado);
         }
 
         // POST: ProductoController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Equipo equipo)
+        public ActionResult Fight(Torneo torneo,int Equipo1, int Equipo2)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    //TODO actualizar torneo
-                    //service.actualizarTorneo(equipo);
+                    if(Equipo1 == Equipo2)
+                    {
+                        throw new Exception("No se puede jugar contra si mismo");
+                    }
+                    var E1 = service.buscarEquiposId(Equipo1);
+                    var E2 = service.buscarEquiposId(Equipo2);
+                    torneo = service.AsignarGanador(torneo,E1, E2);
                     return RedirectToAction("Index");
                 }
             }
-            catch { }
+            catch (Exception e) { throw new Exception(e.Message); }
             return View();
         }
 

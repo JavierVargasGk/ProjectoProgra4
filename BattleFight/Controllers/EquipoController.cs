@@ -68,8 +68,6 @@ namespace BattleFight.Controllers
         public ActionResult Edit(int id)
         {
             var equipoBuscado = service.buscarEquiposId(id);
-            ViewBag.ListaJugadores = equipoBuscado.Jugadores;
-            
             return View(equipoBuscado);
         }
 
