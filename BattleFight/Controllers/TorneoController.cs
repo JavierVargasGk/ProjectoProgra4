@@ -67,7 +67,7 @@ namespace BattleFight.Controllers
                     }
                     var E1 = service.buscarEquiposId(Equipo1);
                     var E2 = service.buscarEquiposId(Equipo2);
-                    torneo = service.AsignarGanador(torneo,E1, E2);
+                    service.AsignarGanador(torneo,E1, E2);
                     return RedirectToAction("Index");
                 }
             }
