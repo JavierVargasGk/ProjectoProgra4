@@ -29,53 +29,58 @@ namespace BattleFight.Controllers
         public ActionResult Index(string EquipoBuscado)
         {
             var model = new List<Equipo>();
-            if (!string.IsNullOrEmpty(EquipoBuscado))
-                model = service.filtroUsuarios(EquipoBuscado);
-            else model = service.mostrarEquipos();
+            if (EquipoBuscado != "")
+            {
+                model = service.FiltroEquipos(EquipoBuscado);
+            }
+            else {model = service.mostrarEquipos();}
             return View(model);
         }
 
         // GET: ProductoController/Create
         public ActionResult Create()
         {
-            ViewBag.equipos = service.mostrarEquipos();
             return View();
         }
 
         // POST: ProductoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Equipo equipo)
+        public ActionResult Create(Equipo equipo,string jugador1, string jugador2, string jugador3, string jugador4)
         {
             try
             {
-                if (ModelState.IsValid)
+                if (equipo != null)
                 {
-                    service.agregarEquipo(equipo);
+                    service.agregarEquipo(equipo,jugador1, jugador2, jugador3, jugador4);
                     return RedirectToAction("Index");
                 }
+                else
+                {
+                    throw new Exception("Equipo creado es nullo");
+                }
             }
-            catch { }
+            catch(Exception e){throw new Exception(e.Message); }
             return View();
         }
 
         // GET: ProductoController/Edit/5
         public ActionResult Edit(int id)
         {
-            var equipoBuscado = service.buscarEquipos(id);
+            var equipoBuscado = service.buscarEquiposId(id);
             return View(equipoBuscado);
         }
 
         // POST: ProductoController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Equipo equipo)
+        public ActionResult Edit(Equipo equipo, string jugador1, string jugador2,string jugador3,string jugador4)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    service.actualizarEquipo(equipo);
+                    service.actualizarEquipo(equipo,jugador1,jugador2,jugador3,jugador4);
                     return RedirectToAction("Index");
                 }
             }
@@ -88,7 +93,7 @@ namespace BattleFight.Controllers
         {
             try
             {
-                var equipoBuscado = service.buscarEquipos(id);
+                var equipoBuscado = service.buscarEquiposId(id);
                 service.eliminarEquipo(equipoBuscado);
                 return RedirectToAction("Index");
             }

@@ -69,30 +69,42 @@ namespace BattleFight.Service
 
             #region Metodos de Equipo
 
-            public void agregarEquipo(Equipo equipo)
+            public void agregarEquipo(Equipo equipo, string jugador1, string jugador2, string jugador3, string jugador4)
             {
+                equipo.AgregarJugador(equipo, jugador1);
+                equipo.AgregarJugador(equipo, jugador2);
+                equipo.AgregarJugador(equipo, jugador3);
+                equipo.AgregarJugador(equipo, jugador4);
+                equipo.Codigo = equipo.generarCodigoEquipo(equipo.Categoria, equipo.Jugadores);
                 equipos.Add(equipo);
                 SaveChanges();
             }
             public List<Equipo> mostrarEquipos()
             {
-                return    equipos.ToList();
+                return equipos.ToList();
             }
 
-            public  Equipo buscarEquipos(int id)
+            public  Equipo buscarEquiposCat(string categoria)
             {
-                var equipoBuscado = equipos.FirstOrDefault(x => x.Id == id);
+                var equipoBuscado = equipos.FirstOrDefault(x => x.Categoria == categoria);
                 if (equipoBuscado != null)
                     return equipoBuscado;
-                else throw new Exception("Usuario no registrado");
+                else throw new Exception("Categoria de equipo no registrada");
             }
-            public void eliminarEquipo(Equipo equipo)
+        public Equipo buscarEquiposId(int id)
+        {
+            var equipoBuscado = equipos.FirstOrDefault(x => x.Id == id);
+            if (equipoBuscado != null)
+                return equipoBuscado;
+            else throw new Exception("Id de equipo no encontrada");
+        }
+        public void eliminarEquipo(Equipo equipo)
             {
                     equipos.Remove(equipo);
                 SaveChanges();
             }
 
-            public void actualizarEquipo(Equipo equipoActualizado)
+            public void actualizarEquipo(Equipo equipoActualizado, string jugador1,string jugador2, string jugador3, string jugador4)
             {
                 var equipoAntiguo = equipos.FirstOrDefault(x => x.Id == equipoActualizado.Id);
                 if (equipoAntiguo != null)
@@ -100,21 +112,35 @@ namespace BattleFight.Service
                     equipoAntiguo.NombreEquipo = equipoActualizado.NombreEquipo;
                     equipoAntiguo.Categoria = equipoActualizado.Categoria;
                     equipoAntiguo.Puntuaje = equipoActualizado.Puntuaje;
-                    equipoAntiguo.Jugadores = equipoActualizado.Jugadores;
+                    if (!equipoAntiguo.Jugadores.Contains(jugador1))
+                    {
+                        equipoAntiguo.Jugadores.RemoveAt(0);
+                        equipoAntiguo.Jugadores.Add(jugador1);
+                    }
+                    if (!equipoAntiguo.Jugadores.Contains(jugador2))
+                    {
+                        equipoAntiguo.Jugadores.RemoveAt(1);
+                        equipoAntiguo.Jugadores.Add(jugador2);
+                    }
+                    if (!equipoAntiguo.Jugadores.Contains(jugador3))
+                    {
+                        equipoAntiguo.Jugadores.RemoveAt(2);
+                        equipoAntiguo.Jugadores.Add(jugador3);
+                    }
+                    if (!equipoAntiguo.Jugadores.Contains(jugador4))
+                    {
+                        equipoAntiguo.Jugadores.RemoveAt(4);
+                        equipoAntiguo.Jugadores.Add(jugador4);
+                    }
                     equipoAntiguo.Codigo = equipoActualizado.generarCodigoEquipo(equipoActualizado.Categoria, equipoActualizado.Jugadores);
                     SaveChanges();
                 }
                 else throw new Exception("Equipo no existente");
             }
-
-            public List<Equipo> filtroEquipos()
+            
+            public List<Equipo> FiltroEquipos(string CategoriaBuscada)
             {
-                return equipos.ToList();
-            }
-
-            public List<Equipo> filtroUsuarios(string CategoriaBuscada)
-            {
-                var equiposFiltrados = equipos.Where(x => x.CategoriaBuscada == CategoriaBuscada).ToList();
+                var equiposFiltrados = equipos.Where(x => x.Categoria == CategoriaBuscada).ToList();
                 if (equiposFiltrados != null)
                     return (List<Equipo>)equiposFiltrados;
                 else throw new Exception("Equipos sin la categoria solicitada");

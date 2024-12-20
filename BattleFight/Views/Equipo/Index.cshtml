@@ -1,0 +1,66 @@
+﻿@model IEnumerable<BattleFight.Models.Equipo>
+<H1>Listado De Equipos</H1>
+<p>
+    <a asp-action="Create">Registrar Equipo</a>
+</p>
+<form asp-action="Index">
+    <div class="form-group">
+        <div class="mb-2">
+            <label class="control-label"></label>
+            <input name ="EquipoBuscado" class="form-control">
+            <span class="text-danger"></span>
+         </div>
+         <div class="mt-1">
+           <input class="" type="submit" value="Filtrar" class="btn btn-primary" />
+         </div>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreEquipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puntuaje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreEquipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Puntuaje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id=item.Id }) 
+                @Html.ActionLink("Detalles", "Details", new { id=item.Id }) 
+                @Html.ActionLink("Borrar", "Delete", new {  id=item.Id})
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

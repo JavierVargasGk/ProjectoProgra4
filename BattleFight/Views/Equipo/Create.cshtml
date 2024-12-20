@@ -1,0 +1,62 @@
+﻿@model BattleFight.Models.Equipo
+
+<h4 xmlns="http://www.w3.org/1999/html">Registrar un Equipo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreEquipo" class="control-label"></label>
+                <input asp-for="NombreEquipo" class="form-control" />
+                <span asp-validation-for="NombreEquipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Puntuaje" class="control-label"></label>
+                <input asp-for="Puntuaje" class="form-control" />
+                <span asp-validation-for="Puntuaje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Categoria" class="control-label"></label> <br/>
+                <label asp-for="Categoria" class="control-label">Beginner</label>
+                <input type="radio" asp-for="Categoria" value="Beginner" /> <br/>
+                <label asp-for="Categoria" class="control-label">Medium</label>
+                <input type="radio" asp-for="Categoria" value="Medium"/> <br/>
+                <label asp-for="Categoria" class="control-label">Expert</label>
+                <input type="radio" asp-for="Categoria" value="Expert"/> <br/>
+                <span asp-validation-for="Categoria" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label id="Jugador1"class="control-label">Alias Jugador 1</label>
+                <input name="jugador1"  class="form-control"/>
+                
+            </div>
+            <div class="form-group">
+                <label id="Jugador2"class="control-label">Alias Jugador 2</label>
+                <input name="jugador2"  class="form-control"/>
+
+            </div>
+            <div class="form-group">
+                <label id="Jugador3"class="control-label">Alias Jugador 3</label>
+                <input name="jugador3"  class="form-control"/>
+
+            </div>
+            <div class="form-group">
+                <label id="Jugador4"class="control-label">Alias Jugador 4</label>
+                <input name="jugador4"  class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

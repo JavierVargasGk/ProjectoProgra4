@@ -61,7 +61,8 @@ namespace BattleFight.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    service.actualizarEquipo(equipo);
+                    //TODO actualizar torneo
+                    //service.actualizarTorneo(equipo);
                     return RedirectToAction("Index");
                 }
             }
