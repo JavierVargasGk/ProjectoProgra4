@@ -46,13 +46,13 @@ namespace BattleFight.Controllers
         // POST: ProductoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Equipo equipo,string jugador1, string jugador2, string jugador3, string jugador4)
+        public ActionResult Create(Equipo equipo)
         {
             try
             {
                 if (equipo != null)
                 {
-                    service.agregarEquipo(equipo,jugador1, jugador2, jugador3, jugador4);
+                    service.agregarEquipo(equipo);
                     return RedirectToAction("Index");
                 }
                 else
@@ -74,13 +74,13 @@ namespace BattleFight.Controllers
         // POST: ProductoController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Equipo equipo, string jugador1, string jugador2,string jugador3,string jugador4)
+        public ActionResult Edit(Equipo equipo)
         {
             try
             {
                 if (equipo != null)
                 {
-                    service.actualizarEquipo(equipo,jugador1,jugador2,jugador3,jugador4);
+                    service.actualizarEquipo(equipo);
                     return RedirectToAction("Index");
                 }
                 else

@@ -71,8 +71,11 @@ namespace BattleFight.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch (Exception e) { ViewBag.Error = e.Message;
-                return View();
+            catch (Exception e) {
+                string categoria = service.buscarTorneos(torneo.Id).Categoria;
+                ViewBag.Error = e.Message;
+                ViewBag.Equipos = service.FiltroEquipos(categoria);
+                return View(torneo);
             }
             return View();
         }

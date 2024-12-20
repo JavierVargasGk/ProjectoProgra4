@@ -70,27 +70,15 @@ namespace BattleFight.Service
 
             #region Metodos de Equipo
 
-            public void agregarEquipo(Equipo equipo, string jugador1, string jugador2, string jugador3, string jugador4)
+            public void agregarEquipo(Equipo equipo)
             {
-                equipo.AgregarJugador(equipo, jugador1,0);
-                equipo.AgregarJugador(equipo, jugador2,1);
-                equipo.AgregarJugador(equipo, jugador3,2);
-                equipo.AgregarJugador(equipo, jugador4,3);
-                equipo.Codigo = equipo.generarCodigoEquipo(equipo.Categoria, equipo.Jugadores);
+                equipo.Codigo = equipo.generarCodigoEquipo(equipo);
                 equipos.Add(equipo);
                 SaveChanges();
             }
             public List<Equipo> mostrarEquipos()
             {
                 return equipos.ToList();
-            }
-
-            public  Equipo buscarEquiposCat(string categoria)
-            {
-                var equipoBuscado = equipos.FirstOrDefault(x => x.Categoria == categoria);
-                if (equipoBuscado != null)
-                    return equipoBuscado;
-                else throw new Exception("Categoria de equipo no registrada");
             }
         public Equipo buscarEquiposId(int id)
         {
@@ -105,7 +93,7 @@ namespace BattleFight.Service
                 SaveChanges();
             }
 
-            public void actualizarEquipo(Equipo equipoActualizado, string jugador1,string jugador2, string jugador3, string jugador4)
+            public void actualizarEquipo(Equipo equipoActualizado)
             {
                 var equipoAntiguo = equipos.FirstOrDefault(x => x.Id == equipoActualizado.Id);
                 if (equipoAntiguo != null)
@@ -113,23 +101,11 @@ namespace BattleFight.Service
                     equipoAntiguo.NombreEquipo = equipoActualizado.NombreEquipo;
                     equipoAntiguo.Categoria = equipoActualizado.Categoria;
                     equipoAntiguo.Puntuaje = equipoActualizado.Puntuaje;
-                    if (equipoAntiguo.Jugadores.ElementAt(0) != jugador1)
-                {
-                        equipoAntiguo.Jugadores[0] = jugador1;
-                    }
-                    if (equipoAntiguo.Jugadores.ElementAt(1) != jugador2)
-                {
-                    equipoAntiguo.Jugadores[1] = jugador2;
-                }
-                    if (equipoAntiguo.Jugadores.ElementAt(2)!=jugador3)
-                    {
-                    equipoAntiguo.Jugadores[2] = jugador3;
-                }
-                    if (equipoAntiguo.Jugadores.ElementAt(3)!=jugador4)
-                    {
-                    equipoAntiguo.Jugadores[3] = jugador4;
-                }
-                    equipoAntiguo.Codigo = equipoActualizado.generarCodigoEquipo(equipoActualizado.Categoria, equipoActualizado.Jugadores);
+                    equipoAntiguo.AliasJugador1 = equipoActualizado.AliasJugador1;
+                    equipoAntiguo.AliasJugador2 = equipoActualizado.AliasJugador2;
+                    equipoAntiguo.AliasJugador3 = equipoActualizado.AliasJugador3;
+                    equipoAntiguo.AliasJugador4 = equipoActualizado.AliasJugador4;
+                    equipoAntiguo.Codigo = equipoActualizado.generarCodigoEquipo(equipoActualizado);
                     SaveChanges();
                 }
                 else throw new Exception("Equipo no existente");
@@ -142,12 +118,6 @@ namespace BattleFight.Service
                     return (List<Equipo>)equiposFiltrados;
                 else throw new Exception("Equipos sin la categoria solicitada");
             }
-
-            public int cantidadEquipo(Equipo equipo)
-            {
-                return equipo.Jugadores.Count();
-            }
-
             #endregion
 
             #region Metodos de Torneo

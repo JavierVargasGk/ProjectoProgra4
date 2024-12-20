@@ -67,7 +67,11 @@ namespace BattleFight.Controllers
                         throw new Exception("Contraseñas no coinciden");
                     }
                     service.agregarUsuario(usuario);
-                    return RedirectToAction("LogIn", "Usuario");
+                    if (ViewBag.NombreUsuario == null)
+                    {
+                        return RedirectToAction("LogIn", "Usuario");
+                    } 
+                    return RedirectToAction("Index", "Usuario");
                 }
             }
             catch (Exception ex)
@@ -88,19 +92,24 @@ namespace BattleFight.Controllers
         // POST: UsuarioController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Usuario usuario)
+        public ActionResult Edit(Usuario usuario, string confirmacion)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    service.actualizarUsuario(usuario);
-                    return RedirectToAction(nameof(Index));
-                }
+                    if (usuario.Contrasenna != confirmacion)
+                    {
+                        throw new Exception("Contraseñas no coinciden");
+                    }
+                        service.actualizarUsuario(usuario);
+                        return RedirectToAction(nameof(Index));
+                    }                   
                 return View();
             }
-            catch
+            catch (Exception e)
             {
+                ViewBag.Error = e.Message;
                 return View();
             }
         }

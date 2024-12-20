@@ -11,18 +11,28 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div>
             <select name="Equipo1">
-                @foreach(Equipo equipoSeleccion in equipos)
+                @try{
+                    @foreach(Equipo equipoSeleccion in equipos)
+                    {
+                        <option  value=@equipoSeleccion.Id>@equipoSeleccion.NombreEquipo</option>
+                        }
+                    } catch (Exception e)
                 {
-                    <option  value=@equipoSeleccion.Id>@equipoSeleccion.NombreEquipo</option>
+                    ViewBag.Error = "No se puede jugar contra si mismo";
                 }
-            </select>
+                </select>
             </div>
             <label>VS</label>
             <div>
                 <select name="Equipo2">
-                    @foreach (Equipo equipoSeleccion in equipos)
+                    @try{
+                        @foreach(Equipo equipoSeleccion in equipos)
+                        {
+                            <option  value=@equipoSeleccion.Id>@equipoSeleccion.NombreEquipo</option>
+                        }
+                    } catch (Exception e)
                     {
-                        <option value=@equipoSeleccion.Id>@equipoSeleccion.NombreEquipo</option>
+                        ViewBag.Error = "No se puede jugar contra si mismo";
                     }
                 </select>
             </div>
