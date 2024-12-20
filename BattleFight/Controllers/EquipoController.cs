@@ -68,6 +68,8 @@ namespace BattleFight.Controllers
         public ActionResult Edit(int id)
         {
             var equipoBuscado = service.buscarEquiposId(id);
+            ViewBag.ListaJugadores = equipoBuscado.Jugadores;
+            
             return View(equipoBuscado);
         }
 
@@ -78,13 +80,17 @@ namespace BattleFight.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                if (equipo != null)
                 {
                     service.actualizarEquipo(equipo,jugador1,jugador2,jugador3,jugador4);
                     return RedirectToAction("Index");
                 }
+                else
+                {
+                    throw new Exception("Equipo creado es nullo");
+                }
             }
-            catch { }
+            catch(Exception e){throw new Exception(e.Message); }
             return View();
         }
 
