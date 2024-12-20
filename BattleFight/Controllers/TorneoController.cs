@@ -71,7 +71,9 @@ namespace BattleFight.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch (Exception e) { throw new Exception(e.Message); }
+            catch (Exception e) { ViewBag.Error = e.Message;
+                return View();
+            }
             return View();
         }
 

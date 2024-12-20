@@ -22,13 +22,13 @@
         public string Contrasenna { get => contrasenna; set => contrasenna = value; }
         public string Alias { get => alias; set => alias = value; }
 
-        public Usuario(int id, string cedula, string nombre,string alias, string genero, DateTime fechaDeRegistro, string estado, string contrasenna)
+        public Usuario(int id, string cedula, string nombre,string alias, string genero, string estado, string contrasenna)
         {
             this.id = id;
             this.cedula = cedula;
             this.nombre = nombre;
             this.genero = genero;
-            this.fechaDeRegistro = fechaDeRegistro;
+            this.fechaDeRegistro = DateTime.Now;
             this.estado = estado;
             this.contrasenna = contrasenna;
             this.alias = alias;
@@ -38,6 +38,7 @@
         {
             this.id = 0;
             this.cedula = "";
+            this.fechaDeRegistro = DateTime.Now;
             this.nombre = "";
             this.genero = "";
             this.estado = "";

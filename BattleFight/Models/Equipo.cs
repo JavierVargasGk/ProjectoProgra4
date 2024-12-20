@@ -1,4 +1,7 @@
-﻿using System.IO.Pipes;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Drawing.Text;
+using System.IO.Pipes;
 
 namespace BattleFight.Models
 {
@@ -8,10 +11,10 @@ namespace BattleFight.Models
         private string codigo;
         private string nombreEquipo;
         private int puntuaje;
-        private List<String> jugadores;
+        private string[] jugadores;
         private string categoria;
 
-        public Equipo(int id, string nombreEquipo, int puntuaje, List<String> jugadores, string categoria, string codigo)
+        public Equipo(int id, string nombreEquipo, int puntuaje, string[] jugadores, string categoria, string codigo)
         {
             this.id = id;
             this.nombreEquipo = nombreEquipo;
@@ -27,26 +30,33 @@ namespace BattleFight.Models
             this.codigo = "";
             this.nombreEquipo = "";
             this.puntuaje = 0;
-            this.jugadores = new List<String>();
+            this.jugadores = new string[4];
             this.categoria = "";
         }
 
         public int Id { get => id; set => id = value; }
         public string NombreEquipo { get => nombreEquipo; set => nombreEquipo = value; }
         public int Puntuaje { get => puntuaje; set => puntuaje = value; }
-        public List<String> Jugadores { get => jugadores; set => jugadores = value; }
+        public string[] Jugadores { get => jugadores; set => jugadores = value;}
+        [NotMapped]
+        public string setJugadoresJson
+        {
+            get => jugadores = JsonConvert.DeserializeObject<string[]>(jugadores);
+            set => jugadores= JsonConvert.SerializeObject(value);
+        }
+
         public string Categoria { get => categoria; set => categoria = value; }
         public string Codigo { get => codigo; set => codigo = value; }
 
-        public string generarCodigoEquipo(string Categoria,List<String>Jugadores) 
+        public string generarCodigoEquipo(string Categoria,string[] Jugadores) 
         {
             Random random = new Random();
             string codigoEquipo = "";
             char letraCategoria = categoria.ToUpper()[0];
             codigoEquipo += letraCategoria;
-            if (jugadores.Count > 0)
+            if (jugadores.Length > 0)
             {
-                codigoEquipo += jugadores.Count();
+                codigoEquipo += jugadores.Length;
             }
             else { 
                 codigoEquipo += 0;
@@ -57,7 +67,7 @@ namespace BattleFight.Models
             return codigoEquipo;
         }
 
-        public void AgregarJugador(Equipo equipo,string jugador)
+        public void AgregarJugador(Equipo equipo,string jugador,int pos)
         {
             if (equipo == null)
             {
@@ -67,7 +77,7 @@ namespace BattleFight.Models
             {
                 return;
             }
-            equipo.Jugadores.Add(jugador);
+            equipo.Jugadores[pos] = jugador;
         }
     }
 }

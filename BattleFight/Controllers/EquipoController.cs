@@ -86,10 +86,10 @@ namespace BattleFight.Controllers
                 else
                 {
                     throw new Exception("Equipo creado es nullo");
+                    return View();
                 }
             }
             catch(Exception e){throw new Exception(e.Message); }
-            return View();
         }
 
         // GET: ProductoController/Delete/5

@@ -1,6 +1,7 @@
 ﻿@model BattleFight.Models.Torneo
 @{
     List<Equipo> equipos = ViewBag.Equipos;
+
 }
 <h4>Torneo</h4>
 <hr />
@@ -29,6 +30,14 @@
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
+        @{
+        if (!string.IsNullOrEmpty(ViewBag.Error))
+        {
+            <div class="alert alert-danger">
+                @ViewBag.Error
+            </div>
+        }
+        }
     </div>
 </div>
 

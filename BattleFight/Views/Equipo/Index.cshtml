@@ -7,11 +7,12 @@
     <div class="form-group">
         <div class="mb-2">
             <label class="control-label"></label>
-            <input name ="EquipoBuscado" class="form-control">
+            <input name ="EquipoBuscado" class="form-control" placeholder="Ingrese una categoria...">
             <span class="text-danger"></span>
          </div>
          <div class="mt-1">
-           <input class="" type="submit" value="Filtrar" class="btn btn-primary" />
+           <input type="reset" value="Limpiar" class="btn btn-info"/>
+           <input type="submit" value="Filtrar" class="btn btn-primary" />
          </div>
     </div>
 </form>
@@ -20,7 +21,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NombreEquipo)
+                <label class="control-label">Nombre</label>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Puntuaje)

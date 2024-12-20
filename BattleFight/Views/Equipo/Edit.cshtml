@@ -1,32 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Mvc.ModelBinding
 @model BattleFight.Models.Equipo
-@{
-    String jugadores0 = null;
-    String jugadores1 = null;
-    String jugadores2 = null;
-    String jugadores3 = null;
-    List<String> jugadores = ViewBag.ListaJugadores;
-    if (jugadores.Count() > 0)
-    {
-        jugadores0 = Model.Jugadores[0];
-        if (jugadores.Count() > 1)
-        {
-            jugadores1 = Model.Jugadores[1];
-        }
 
-        if (jugadores.Count() > 2)
-        {
-            jugadores2 = Model.Jugadores[2];
-
-        }
-
-        if (jugadores.Count() > 3)
-        {
-            jugadores3 = Model.Jugadores[3];
-        }
-    }
-
-}
 <h4>Equipo</h4>
 <hr />
 <div class="row">
@@ -56,22 +30,22 @@
 
             <div class="form-group">
                 <label id="Jugador1" class="control-label">Alias Jugador 1</label>
-                <input name="jugador1" value="@jugadores0" class="form-control"/>
+                <input name="jugador1" value="@Model.Jugadores[0]" class="form-control"/>
 
             </div>
             <div class="form-group">
                 <label id="Jugador2" class="control-label">Alias Jugador 2</label>
-                <input name="jugador2" value="@jugadores1" class="form-control"/>
+                <input name="jugador2" value="@Model.Jugadores[1]" class="form-control" />
 
             </div>
             <div class="form-group">
                 <label id="Jugador3" class="control-label">Alias Jugador 3</label>
-                <input name="jugador3"  value="@jugadores2" class="form-control"/>
+                <input name="jugador3" value="@Model.Jugadores[2]" class="form-control" />
 
             </div>
             <div class="form-group">
                 <label id="Jugador4" class="control-label">Alias Jugador 4</label>
-                <input name="jugador4" value="@jugadores3" class="form-control"/>
+                <input name="jugador4" value="@Model.Jugadores[3]" class="form-control" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Registrar" class="btn btn-primary" />

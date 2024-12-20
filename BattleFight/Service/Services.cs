@@ -1,5 +1,6 @@
 ﻿using BattleFight.Models;
 using System.Data.Entity;
+using System.Reflection.Emit;
 
 namespace BattleFight.Service
 {
@@ -12,7 +13,7 @@ namespace BattleFight.Service
 
             public DbSet<Torneo> torneos { get; set; }
 
-            public Services() : base("BattleFight") { }
+        public Services() : base("BattleFight") { }
 
             #region Metodos de Usuario
 
@@ -71,10 +72,10 @@ namespace BattleFight.Service
 
             public void agregarEquipo(Equipo equipo, string jugador1, string jugador2, string jugador3, string jugador4)
             {
-                equipo.AgregarJugador(equipo, jugador1);
-                equipo.AgregarJugador(equipo, jugador2);
-                equipo.AgregarJugador(equipo, jugador3);
-                equipo.AgregarJugador(equipo, jugador4);
+                equipo.AgregarJugador(equipo, jugador1,0);
+                equipo.AgregarJugador(equipo, jugador2,1);
+                equipo.AgregarJugador(equipo, jugador3,2);
+                equipo.AgregarJugador(equipo, jugador4,3);
                 equipo.Codigo = equipo.generarCodigoEquipo(equipo.Categoria, equipo.Jugadores);
                 equipos.Add(equipo);
                 SaveChanges();
@@ -114,24 +115,20 @@ namespace BattleFight.Service
                     equipoAntiguo.Puntuaje = equipoActualizado.Puntuaje;
                     if (equipoAntiguo.Jugadores.ElementAt(0) != jugador1)
                 {
-                        equipoAntiguo.Jugadores.RemoveAt(0);
-                        equipoAntiguo.Jugadores.Insert(0, jugador1);
+                        equipoAntiguo.Jugadores[0] = jugador1;
                     }
                     if (equipoAntiguo.Jugadores.ElementAt(1) != jugador2)
                 {
-                        equipoAntiguo.Jugadores.RemoveAt(1);
-                        equipoAntiguo.Jugadores.Insert(1,jugador2);
-                    }
+                    equipoAntiguo.Jugadores[1] = jugador2;
+                }
                     if (equipoAntiguo.Jugadores.ElementAt(2)!=jugador3)
                     {
-                        equipoAntiguo.Jugadores.RemoveAt(2);
-                        equipoAntiguo.Jugadores.Insert(2,jugador3);
-                    }
+                    equipoAntiguo.Jugadores[2] = jugador3;
+                }
                     if (equipoAntiguo.Jugadores.ElementAt(3)!=jugador4)
                     {
-                        equipoAntiguo.Jugadores.RemoveAt(3);
-                        equipoAntiguo.Jugadores.Insert(3,jugador4);
-                    }
+                    equipoAntiguo.Jugadores[3] = jugador4;
+                }
                     equipoAntiguo.Codigo = equipoActualizado.generarCodigoEquipo(equipoActualizado.Categoria, equipoActualizado.Jugadores);
                     SaveChanges();
                 }
