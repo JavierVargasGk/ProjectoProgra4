@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\BattleFight.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto+controllers\\BattleFight\\wwwroot\\css\\CCSS.css",
+      "PackagePath": "staticwebassets\\css\\CCSS.css"
+    },
+    {
       "Id": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto+controllers\\BattleFight\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

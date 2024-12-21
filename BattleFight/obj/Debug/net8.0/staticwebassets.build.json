@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i5GCCkpkRkEJ7RG3caTAIidSsu+GcyzCWFkywVlCjJ8=",
+  "Hash": "1Zu8bmeo6GcvmMxayyEWmJpb+xU7eAdyUt7jdUcfNFE=",
   "Source": "BattleFight",
   "BasePath": "_content/BattleFight",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto+controllers\\BattleFight\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BattleFight.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto+controllers\\BattleFight\\wwwroot\\css\\CCSS.css",
+      "SourceId": "BattleFight",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto+controllers\\BattleFight\\wwwroot\\",
+      "BasePath": "_content/BattleFight",
+      "RelativePath": "css/CCSS.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CCSS.css"
     },
     {
       "Identity": "C:\\Users\\javie\\OneDrive\\Desktop\\Projecto+controllers\\BattleFight\\wwwroot\\css\\site.css",
