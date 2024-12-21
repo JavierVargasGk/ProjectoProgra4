@@ -29,7 +29,7 @@ namespace BattleFight.Controllers
         public ActionResult Index(string EquipoBuscado)
         {
             var model = new List<Equipo>();
-            if (EquipoBuscado != "")
+            if (EquipoBuscado != null)
             {
                 model = service.FiltroEquipos(EquipoBuscado);
             }
