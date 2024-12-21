@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace BattleFight.Controllers
 {
-    public class HomeController : Controller
+    public class BonusController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<BonusController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public BonusController(ILogger<BonusController> logger)
         {
             _logger = logger;
         }

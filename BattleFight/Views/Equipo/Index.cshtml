@@ -3,17 +3,19 @@
 <p>
     <a asp-action="Create">Registrar Equipo</a>
 </p>
+
 <form asp-action="Index">
-    <div class="form-group">
+    <div>
+        <label>Filtrar por categoria</label>
         <div class="mb-2">
             <label class="control-label"></label>
-            <input name ="EquipoBuscado" class="form-control" placeholder="Ingrese una categoria...">
+            <input name="EquipoBuscado" class="form-control" placeholder="Ingrese una categoria...">
             <span class="text-danger"></span>
-         </div>
-         <div class="mt-1">
-           <input type="reset" value="Limpiar" class="btn btn-info"/>
-           <input type="submit" value="Filtrar" class="btn btn-primary" />
-         </div>
+        </div>
+        <div class="mt-1">
+            <input type="submit" value="Filtrar" class="btn btn-primary"/>
+            <a asp-action="Index" value="Reiniciar Filtros" class="btn btn-info">reiniciar filtros</a>
+        </div>
     </div>
 </form>
 

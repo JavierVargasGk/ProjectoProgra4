@@ -38,7 +38,7 @@ namespace BattleFight.Controllers
             {
                 var UsuarioLogueado = service.validarLogin(user.Alias, user.Contrasenna);
                 HttpContext.Session.SetString("NombreUsuario", UsuarioLogueado.Nombre);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Bonus");
             }
             catch (Exception ex)
             {
@@ -67,7 +67,7 @@ namespace BattleFight.Controllers
                         throw new Exception("Contraseñas no coinciden");
                     }
                     service.agregarUsuario(usuario);
-                    if (ViewBag.NombreUsuario == null)
+                    if (HttpContext.Session.GetString("NombreUsuario") == null)
                     {
                         return RedirectToAction("LogIn", "Usuario");
                     } 
@@ -113,10 +113,8 @@ namespace BattleFight.Controllers
                 return View();
             }
         }
-
-        // POST: UsuarioController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        
+ 
         public ActionResult Delete(int id)
         {
             try
@@ -125,8 +123,9 @@ namespace BattleFight.Controllers
                 service.eliminarUsuario(usuarioBuscado);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception e)
             {
+                ViewBag.Error = e.Message;
                 return View();
             }
         }
