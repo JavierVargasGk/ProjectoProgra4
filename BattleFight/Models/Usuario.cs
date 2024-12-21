@@ -17,7 +17,9 @@
         public string Cedula { get => cedula; set => cedula = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Genero { get => genero; set => genero = value; }
-        public DateTime FechaDeRegistro { get => fechaDeRegistro; set => fechaDeRegistro = DateTime.Now; }
+        public DateTime FechaDeRegistro { get => fechaDeRegistro;
+            set => fechaDeRegistro = value;
+        }
         public string Estado { get => estado; set => estado = value; }
         public string Contrasenna { get => contrasenna; set => contrasenna = value; }
         public string Alias { get => alias; set => alias = value; }

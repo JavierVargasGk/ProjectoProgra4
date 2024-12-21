@@ -6,12 +6,12 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Premio" class="control-label"></label>
-                <input asp-for="Premio" type="number" step="0.01" class="form-control" />
+            <div>
+                <label asp-for="Premio"></label><br/>
+                <input asp-for="Premio" type="number" step="0.01"  />
                 <span asp-validation-for="Premio" class="text-danger"></span>
             </div>
-            <div>
+            <div class="mt-1">
                 <label asp-for="Categoria" class="control-label"></label> <br />
                 <label asp-for="Categoria" class="control-label">Beginner</label>
                 <input type="radio" asp-for="Categoria" value="Beginner" /> <br />
